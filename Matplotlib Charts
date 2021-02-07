@@ -1,0 +1,26 @@
+# Plot the Total profit column with Boxplot(horizontal, Vertical, Notch), Histogram, barplot, Dotchart.
+
+#Histogram
+import pandas as pd
+df = pd.read_csv(“Companysales.csv”)
+df_hist.plot.hist(‘Total Profit”)
+
+-----------------------------------------------------------
+#Scatterplot 
+import pandas as pd
+df = pd.read_csv(“Companysales.csv”)
+df_scatter.plot.scatter(x=’a’, y=’b’);
+
+-----------------------------------------------------------
+# Barplot
+import pandas as pd
+df = pd.read_csv(“Companysales.csv”)
+bp = df.plot.bar(x=”total”, y=’Profit’, rot=0)
+
+-----------------------------------------------------------
+# Piechart
+import pandas as pd
+df = pd.read_csv(“Companysales.csv”)
+df.plot.pie(figsize =(6, 8))
+
+-----------------------------------------------------------
