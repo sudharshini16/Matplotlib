@@ -1,0 +1,57 @@
+# Use the company sales data and plot the Total profit of all months. 
+import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_csv(“Companysales.csv”)
+profitList = df ['total_profit'].tolist()
+monthList  = df ['month_number'].tolist()
+
+plt.plot(monthList, profitList, label = 'Month-wise Profit data of last year')
+plt.xlabel('Month number')
+plt.ylabel('Profit in dollar')
+plt.xticks(monthList)
+plt.title('Company profit per month')
+plt.yticks([100000, 200000, 300000, 400000, 500000])
+plt.show()
+
+-----------------------------------------------------------------------------------------
+# Read toothpaste sales data of each month and show it using a scatter plot.
+           Also, add a grid in the plot. gridline style should “–“.
+           
+monthList  = df ['month_number'].tolist()
+toothPasteSalesData = df ['toothpaste'].tolist()
+plt.scatter(monthList, toothPasteSalesData, label = 'Tooth paste Sales data')
+plt.xlabel('Month Number')
+plt.ylabel('Number of units Sold')
+plt.legend(loc='upper left')
+plt.title(' Tooth paste Sales data')
+plt.xticks(monthList)
+plt.grid(True, linewidth= 1, linestyle="--")
+plt.show()
+
+-----------------------------------------------------------------------------------------
+# Do the scatterplot on Total profit & Month_number column.
+Scatterplot 
+import pandas as pd
+df = pd.read_csv(“Companysales.csv”)
+df_scatter.plot.scatter(x=’Month’, y=’Total Profit’);
+
+-----------------------------------------------------------------------------------------
+# Plot the Total profit with format” red square -” (“rs-”) and only “red circles “ (“ro”).
+
+Sp = df_scatter.plot.scatter(x='TotalProfit', y='Month', color='DarkRed', label='Length');
+
+-----------------------------------------------------------------------------------------
+# Read sales data of bathing soap of all months and show it using a bar chart.
+
+monthList  = df ['month_number'].tolist()
+bathingsoapSalesData   = df ['bathingsoap'].tolist()
+plt.bar(monthList, bathingsoapSalesData)
+plt.xlabel('Month Number')
+plt.ylabel('Sales units in number')
+plt.title(' Sales data')
+plt.xticks(monthList)
+plt.grid(True, linewidth= 1, linestyle="--")
+plt.title('bathingsoap sales data')
+plt.show()
+
+-----------------------------------------------------------------------------------------
